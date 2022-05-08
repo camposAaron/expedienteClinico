@@ -1,0 +1,7 @@
+{
+  "name": "expediente-clinico",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
