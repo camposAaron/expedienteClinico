@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { PhotoService } from '../services/photo.service';
 
 @Component({
   selector: 'app-tab1',
@@ -7,6 +9,16 @@ import { Component } from '@angular/core';
 })
 export class Tab1Page {
 
-  constructor() {}
+  constructor(
+    private photoService: PhotoService,
+    private router: Router
+    ) {}
 
+  addPhotoGallery(){
+    this.photoService.addNewToGallery();
+  }
+
+  navigateToNew(){
+    this.router.navigate(['tabs/tab1/nuevo']);
+  }
 }
